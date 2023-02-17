@@ -280,7 +280,7 @@ export async function getQueryText({ id, title, url, userConfig, language }) {
 
   // Prompt
   const queryText = `Title: ${title}
-URL: ${url}
+URL: ${url.includes('https') ? url : 'https://www.youtube.com/' + url}
 
 Transcript:
 
