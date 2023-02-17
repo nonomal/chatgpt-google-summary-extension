@@ -220,3 +220,12 @@ a.glarity--header__logo {
     padding-right: 10px;
   }
 }
+
+.glarity--clickbait--score {
+  display: inline-block;
+  color: var(--yt-spec-call-to-action);
+  background-color: var(--yt-spec-suggested-action);
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 4px;
+}

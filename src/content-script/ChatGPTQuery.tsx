@@ -12,6 +12,7 @@ export type QueryStatus = 'success' | 'error' | undefined
 interface Props {
   question: string
   onStatusChange?: (status: QueryStatus) => void
+  style?: string
 }
 
 function ChatGPTQuery(props: Props) {
@@ -72,7 +73,9 @@ function ChatGPTQuery(props: Props) {
   }, [])
 
   if (answer) {
-    return (
+    return props?.style === 'simple' ? (
+      <>{answer.text}</>
+    ) : (
       <div className="markdown-body gpt-markdown" id="gpt-answer" dir="auto">
         <div className="glarity--chatgpt--header">
           <ChatGPTFeedback

@@ -1,6 +1,7 @@
 import Browser from 'webextension-polyfill'
 import $ from 'jquery'
 import copy from 'copy-to-clipboard'
+import { Language } from '../config'
 
 export function getPossibleElementByQuerySelector<T extends Element>(
   queryArray: string[],
@@ -260,4 +261,41 @@ export function waitForElm(selector) {
       subtree: true,
     })
   })
+}
+
+export async function getQueryText({ id, title, url, userConfig, language }) {
+  // Get transcript
+  const langOptionsWithLink = await getLangOptionsWithLink(id)
+  const rawTranscript = !langOptionsWithLink
+    ? []
+    : await getRawTranscript(langOptionsWithLink[0].link)
+  const transcriptList = !langOptionsWithLink ? [] : await getTranscriptHTML(rawTranscript, id)
+  const transcript =
+    transcriptList.map((v) => {
+      return `(${v.time}):${v.text}`
+    }) || []
+
+  let transcriptText = transcript.join('. \r\n ')
+  transcriptText = transcriptText.length > 3800 ? transcriptText.substring(0, 3800) : transcriptText
+
+  // Prompt
+  const queryText = `Title: ${title}
+URL: ${url}
+
+Transcript:
+
+${transcriptText}
+
+Instructions: The above is the transcript and title of a youtube video I would like to analyze for exaggeration. Based on the content, please give a Clickbait score of the title.You only need to answer the rating result, not the reason for the rating.
+
+reply format:
+Clickbait score: 10/10
+
+Reply in ${userConfig.language === Language.Auto ? language : userConfig.language} Language.`
+
+  return queryText
+}
+
+export async function waitMs(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
 }

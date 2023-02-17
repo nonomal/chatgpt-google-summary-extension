@@ -3,6 +3,7 @@ import '../base.css'
 import { getUserConfig, Language, Theme } from '../config'
 import { detectSystemColorScheme } from '../utils'
 import ChatGPTContainer from './ChatGPTContainer'
+import ChatGPTCard from './ChatGPTCard'
 import { config, SearchEngine } from './search-engine-configs'
 import {
   getPossibleElementByQuerySelector,
@@ -11,9 +12,12 @@ import {
   getTranscriptHTML,
   getRawTranscript,
   waitForElm,
+  getQueryText,
+  waitMs,
 } from './utils'
 import xss from 'xss'
 import './styles.scss'
+import { setParams, queryParam } from 'gb-url'
 
 const siteRegex = new RegExp(Object.keys(config).join('|'))
 const siteName = location.hostname.match(siteRegex)![0]
@@ -69,6 +73,42 @@ async function mount(question: string, siteConfig: SearchEngine, subtitle?: any)
   )
 }
 
+// YouTube List
+async function mountYouTubeList(
+  question: string,
+  siteConfig: SearchEngine,
+  items: any,
+  index: number,
+) {
+  const container = document.createElement('div')
+  container.className = 'glarity--clickbait--score'
+  // container.append('loading...')
+
+  const userConfig = await getUserConfig()
+  const item = items[index]
+
+  if (item.querySelector('div.glarity--clickbait--score')) {
+    item.querySelector('div.glarity--clickbait--score')?.remove()
+  }
+
+  console.log('item', item, item.querySelector('#metadata.ytd-video-meta-block'))
+
+  if (!item) {
+    return
+  }
+
+  item.querySelector('#metadata.ytd-video-meta-block').append(container)
+
+  render(
+    <ChatGPTCard
+      question={question}
+      style="simple"
+      triggerMode={userConfig.triggerMode || 'always'}
+    />,
+    container,
+  )
+}
+
 async function run() {
   const language = window.navigator.language
   const userConfig = await getUserConfig()
@@ -77,8 +117,100 @@ async function run() {
   // Youtube
   if (siteName === 'youtube') {
     const videoId = getSearchParam(window.location.href)?.v
+    let vId = ''
 
     if (!videoId) {
+      await waitForElm('div#contents.ytd-rich-grid-renderer')
+
+      const contents = document.querySelector('div#contents.ytd-rich-grid-renderer')
+
+      if (!contents) {
+        return
+      }
+
+      const items = contents.querySelectorAll('div#content.ytd-rich-item-renderer') || []
+
+      const itemList = Array.from(items).map((item) => {
+        const linkElement = item.querySelector('a#video-title-link.ytd-rich-grid-media')
+        const url = linkElement?.getAttribute('href') || ''
+        const title = linkElement?.textContent
+        const id = queryParam('v', url)
+
+        return { id, title, url }
+      })
+
+      for (let index = 0; index < 6; index++) {
+        const item = itemList[index]
+        const { id, title, url } = item
+
+        const queryText = await getQueryText({ id, title, url, userConfig, language })
+        console.log('queryText', queryText)
+        await mountYouTubeList(queryText, siteConfig, items, index)
+
+        await waitMs(20 * 1000)
+      }
+
+      //       const element = document.querySelectorAll('ytd-thumbnail.ytd-rich-grid-media')[0]
+      //       const url = element.querySelector('a.ytd-thumbnail')?.href
+      //       vId = queryParam('v', url)
+
+      //       element.addEventListener('mouseenter', async () => {
+      //         console.log('鼠标进入了元素')
+
+      //         // Get Transcript Language Options & Create Language Select Btns
+      //         const langOptionsWithLink = await getLangOptionsWithLink(vId)
+
+      //         const rawTranscript = !langOptionsWithLink
+      //           ? []
+      //           : await getRawTranscript(langOptionsWithLink[0].link)
+      //         console.log('rawTranscript', rawTranscript)
+
+      //         const subtitleList = !langOptionsWithLink
+      //           ? []
+      //           : await getTranscriptHTML(rawTranscript, videoId)
+      //         console.log('subtitleList', subtitleList)
+
+      //         const subtitle =
+      //           subtitleList.map((v) => {
+      //             return `(${v.time}):${v.text}`
+      //           }) || []
+
+      //         let suttitleText = subtitle.join('. \r\n ')
+
+      //         suttitleText = suttitleText.length > 3800 ? suttitleText.substring(0, 3800) : suttitleText
+
+      //         const vTitle = element.parentElement.querySelector(
+      //           'yt-formatted-string.ytd-rich-grid-media',
+      //         ).textContent
+
+      //         const queryText = `Title: ${vTitle}
+      // URL: ${url}
+
+      // Transcript:
+
+      // ${suttitleText}
+
+      // Instructions: The above is the transcript and title of a youtube video I would like to analyze for exaggeration. Based on the content, please give a Clickbait score of the title.
+      // reply format:
+      // **Clickbait score**: 10/10
+
+      // Reply in ${userConfig.language === Language.Auto ? language : userConfig.language} Language.`
+
+      //         console.log('queryText', queryText)
+
+      //         document
+      //           .querySelector('div#video-preview')
+      //           .querySelector('div#metadata-line')
+      //           .insertAdjacentHTML(
+      //             'beforeend',
+      //             `<div class="glarity--clickbait--score"><strong>Clickbait score</strong>: 6/10</div>`,
+      //           )
+      //       })
+
+      //       element.addEventListener('mouseleave', () => {
+      //         console.log('鼠标离开了元素')
+      //       })
+
       return
     }
 
@@ -102,13 +234,36 @@ async function run() {
 
     suttitleText = suttitleText.length > 3800 ? suttitleText.substring(0, 3800) : suttitleText
 
-    const queryText = `Video transcript:
+    const videoTitle = document.title
+    const videoUrl = window.location.href
+
+    //     const queryText = `Video transcript:
+
+    // ${suttitleText}
+
+    // Instructions: Use the transcript information above to summarise the highlights of this video.
+
+    // Reply in ${userConfig.language === Language.Auto ? language : userConfig.language} Language.`
+    const queryText = `Title: ${videoTitle}
+URL: ${videoUrl}
+
+Transcript:
 
 ${suttitleText}
 
-Instructions: Use the transcript information above to summarise the highlights of this video.
+Instructions: The above is the transcript and title of a youtube video I would like to analyze for exaggeration. Based on the content, please give a Clickbait score of the title. Please provide a brief explanation for your rating. and give a most accurate title according to the transcript and summarize the highlights of the video.
+reply format:
+**Clickbait score**: 10/10 \r\n
+**Explanation**: 
+xxx \r\n
+**More accurate**:
+title:xxx \r\n
+**Summary**: 
+xxx \r\n
 
 Reply in ${userConfig.language === Language.Auto ? language : userConfig.language} Language.`
+
+    console.log('queryText', queryText)
 
     mount(subtitle.length > 0 ? queryText : '', siteConfig, subtitleList)
     return

@@ -8,13 +8,20 @@ interface Props {
   question: string
   triggerMode: TriggerMode
   onStatusChange?: (status: QueryStatus) => void
+  style?: string
 }
 
 function ChatGPTCard(props: Props) {
   const [triggered, setTriggered] = useState(false)
 
   if (props.triggerMode === TriggerMode.Always) {
-    return <ChatGPTQuery question={props.question} onStatusChange={props.onStatusChange} />
+    return (
+      <ChatGPTQuery
+        style={props.style}
+        question={props.question}
+        onStatusChange={props.onStatusChange}
+      />
+    )
   }
   if (props.triggerMode === TriggerMode.QuestionMark) {
     if (endsWithQuestionMark(props.question.trim())) {
