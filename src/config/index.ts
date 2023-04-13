@@ -131,27 +131,7 @@ export async function saveProviderConfigs(
 
 export const BASE_URL = 'https://chat.openai.com'
 
-export const DEFAULT_PAGE_SUMMARY_BLACKLIST = `https://translate.google.com
-https://www.deepl.com
-https://www.youtube.com
-https://youku.com
-https://v.qq.com
-https://www.iqiyi.com
-https://www.bilibili.com
-https://www.tudou.com
-https://www.tiktok.com
-https://vimeo.com
-https://www.dailymotion.com
-https://www.twitch.tv
-https://www.hulu.com
-https://www.netflix.com
-https://www.hbomax.com
-https://www.disneyplus.com
-https://www.peacocktv.com
-https://www.crunchyroll.com
-https://www.funimation.com
-https://www.viki.com
-`
+export const DEFAULT_PAGE_SUMMARY_BLACKLIST = `https://www.youtube.com`
 export const APP_TITLE = `Glarity Summary`
 
 export const DEFAULT_MODEL = 'gpt-3.5-turbo'

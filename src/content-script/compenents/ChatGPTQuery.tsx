@@ -41,16 +41,6 @@ function ChatGPTQuery(props: Props) {
 
     return debounce(() => {
       setStatus(undefined)
-      // setError('error')
-      // setStatus('error')
-      // return
-
-      // setDone(true)
-      // setStatus('done')
-      // setAnswer({
-      //   text: `Glarity Summary is a ChatGPT for YouTube/Google extension that can summarize YouTube videos and Google searches, also supports Yahoo! ニュース, PubMed, PMC, NewsPicks, Github, Nikkei, Bing, Google Patents and any page summary.`,
-      // })
-      // return
 
       const port = Browser.runtime.connect()
       const listener = (msg: any) => {
@@ -156,19 +146,6 @@ function ChatGPTQuery(props: Props) {
               {answer.text}
             </ReactMarkdown>
           </div>
-
-          {/* {done && showTip && (
-          <p className="glarity--italic glarity--mt-2">
-            Enjoy this extension? Give us a 5-star rating at{' '}
-            <a
-              href="https://chatgpt4google.com/chrome?utm_source=rating_tip"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Chrome Web Store
-            </a>
-          </p>
-        )} */}
         </div>
 
         {!ignoreTranslation && (

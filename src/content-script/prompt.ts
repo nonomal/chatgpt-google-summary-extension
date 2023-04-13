@@ -104,7 +104,6 @@ function truncateTranscript(str, providerConfigs) {
 
   const tokenLimit = providerConfigs === ProviderType.GPT3 ? apiLimit : limit
 
-  // if (providerConfigs === ProviderType.GPT3) {
   const encoded: { bpe: number[]; text: string[] } = tokenizer.encode(textStr)
   const bytes = encoded.bpe.length
 
@@ -116,15 +115,6 @@ function truncateTranscript(str, providerConfigs) {
   }
 
   return textStr
-  // } else {
-  //   const bytes = textToBinaryString(str).length
-  //   if (bytes > tokenLimit) {
-  //     const ratio = tokenLimit / bytes
-  //     const newStr = str.substring(0, str.length * ratio)
-  //     return newStr
-  //   }
-  //   return str
-  // }
 }
 
 function truncateTranscriptByToken(str, providerConfigs) {

@@ -185,7 +185,7 @@ function OptionsPage(
         </Text>
         <ProviderSelect />
 
-        <CustomizePrompt
+        {/* <CustomizePrompt
           prompt={prompt}
           promptSearch={promptSearch}
           setPrompt={setPrompt}
@@ -194,15 +194,15 @@ function OptionsPage(
           setPromptPage={setPromptPage}
           promptComment={promptComment}
           setPromptComment={setPromptComment}
-        />
+        /> */}
 
         {/* Enable/Disable Glarity */}
-        <EnableGlarity
+        {/* <EnableGlarity
           enableSites={enableSites}
           setEnableSites={setEnableSites}
           allSites={allSites}
           supportSites={supportSites}
-        />
+        /> */}
 
         {/* Misc */}
         {/* <Text h3 className="glarity--mt-8">
@@ -218,14 +218,14 @@ function OptionsPage(
         {/* <Divider /> */}
 
         {/* Page Summary */}
-        <PageSummaryComponent
+        {/* <PageSummaryComponent
           pageSummaryEnable={pageSummaryEnable}
           setPageSummaryEnable={setPageSummaryEnable}
           pageSummaryWhitelist={pageSummaryWhitelist}
           pageSummaryBlacklist={pageSummaryBlacklist}
           setPageSummaryWhitelist={setPageSummaryWhitelist}
           setPageSummaryBlacklist={setPageSummaryBlacklist}
-        />
+        /> */}
       </main>
     </div>
   )

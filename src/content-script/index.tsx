@@ -11,7 +11,6 @@ import { siteConfig as sietConfigFn } from './utils'
 import '@/content-script/styles.scss'
 
 const siteConfig = sietConfigFn()
-
 async function Run() {
   const userConfig = await getUserConfig()
   const siteRegex = new RegExp(
