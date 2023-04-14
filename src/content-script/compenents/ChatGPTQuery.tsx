@@ -34,7 +34,7 @@ function ChatGPTQuery(props: Props) {
   const [showTip, setShowTip] = useState(false)
   const [status, setStatus] = useState<QueryStatus>()
   const wrapRef = useRef<HTMLDivElement | null>(null)
-  const [showContent, setShowContent] = useState(true)
+  const [showContent, setShowContent] = useState<boolean>(true)
 
   const requestGpt = useMemo(() => {
     console.log('question', question)
@@ -133,6 +133,9 @@ function ChatGPTQuery(props: Props) {
               answerText={answer.text}
               showContent={showContent}
               setShowContent={setShowContent}
+              status={status}
+              setStatus={setStatus}
+              onStatusChange={onStatusChange}
             />
           </div>
           <div
@@ -145,6 +148,11 @@ function ChatGPTQuery(props: Props) {
             <ReactMarkdown rehypePlugins={[[rehypeHighlight, { detect: true }]]}>
               {answer.text}
             </ReactMarkdown>
+            {/* <button
+              className={classNames('glarity--btn', 'glarity--btn__primary', 'glarity--btn__small')}
+            >
+              Stop responding
+            </button> */}
           </div>
         </div>
 
