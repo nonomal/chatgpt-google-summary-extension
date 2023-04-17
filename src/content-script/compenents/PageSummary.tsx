@@ -3,11 +3,10 @@ import classNames from 'classnames'
 import { XCircleFillIcon, GearIcon } from '@primer/octicons-react'
 import Browser from 'webextension-polyfill'
 import ChatGPTQuery from '@/content-script/compenents/ChatGPTQuery'
-// import { extractFromHtml } from '@/utils/article-extractor/cjs/article-extractor.esm'
 import { getUserConfig, Language, getProviderConfigs, APP_TITLE } from '@/config'
 import { getSummaryPrompt } from '@/content-script/prompt'
 import { isIOS } from '@/utils/utils'
-import { getPageSummaryContntent, getPageSummaryComments } from '@/content-script/utils'
+import { getPageSummaryComments } from '@/content-script/utils'
 import {
   commentSummaryPrompt,
   commentSummaryPromptHightligt,
@@ -56,8 +55,7 @@ function PageSummary(props: Props) {
     setQuestion('')
 
     const pageComments = await getPageSummaryComments()
-    const pageContent = await getPageSummaryContntent()
-    const article = pageComments?.content ? pageComments : pageContent
+    const article = pageComments
 
     const title = article?.title || document.title || ''
     const description =
@@ -104,20 +102,20 @@ function PageSummary(props: Props) {
     setSupportSummary(false)
   }, [])
 
-  useEffect(() => {
-    Browser.runtime.onMessage.addListener((message) => {
-      const { type } = message
-      if (type === 'OPEN_WEB_SUMMARY') {
-        if (showCard) {
-          return
-        }
+  // useEffect(() => {
+  //   Browser.runtime.onMessage.addListener((message) => {
+  //     const { type } = message
+  //     if (type === 'OPEN_WEB_SUMMARY') {
+  //       if (showCard) {
+  //         return
+  //       }
 
-        setQuestion('')
-        setShowCard(true)
-        setLoading(false)
-      }
-    })
-  }, [showCard])
+  //       setQuestion('')
+  //       setShowCard(true)
+  //       setLoading(false)
+  //     }
+  //   })
+  // }, [showCard])
 
   useEffect(() => {
     const hostname = location.hostname

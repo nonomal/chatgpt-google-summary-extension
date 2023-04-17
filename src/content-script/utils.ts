@@ -2,7 +2,6 @@ import Browser from 'webextension-polyfill'
 import $ from 'jquery'
 import copy from 'copy-to-clipboard'
 import { config } from './search-engine-configs'
-import { extractFromHtml } from '@/utils/article-extractor/cjs/article-extractor.esm'
 
 export interface GetReviewsProps {
   content: string
@@ -63,7 +62,7 @@ export async function getLangOptionsWithLink(videoId) {
 
   const captions_json = JSON.parse(splittedHtml[1].split(',"videoDetails')[0].replace('\n', ''))
   const captionTracks = captions_json.playerCaptionsTracklistRenderer.captionTracks
-  const languageOptions = Array.from(captionTracks).map((i) => {
+  const languageOptions = Array.from(captionTracks).map((i: any) => {
     return i.name.simpleText
   })
 
@@ -93,7 +92,7 @@ export async function getRawTranscript(link) {
   const jQueryParse = $.parseHTML(transcriptPageXml)
   const textNodes = jQueryParse[1].childNodes
 
-  return Array.from(textNodes).map((i) => {
+  return Array.from(textNodes).map((i: any) => {
     return {
       start: i.getAttribute('start'),
       duration: i.getAttribute('dur'),
@@ -273,7 +272,7 @@ export function matchSites(site: string) {
 
 export const hostname = location.hostname
 
-export function siteName() {
+export function siteName() { 
   const siteRegex = new RegExp(Object.keys(config).join('|'))
   const siteName =
     hostname === 'news.yahoo.co.jp'
@@ -298,22 +297,6 @@ export function siteConfig() {
   return config[siteName()]
 }
 
-export const getPageSummaryContntent = async () => {
-  const html = document.querySelector('html')?.outerHTML
-  const url = location.href
-
-  if (!html) {
-    return
-  }
-
-  try {
-    const article = await extractFromHtml(html, url)
-    return article
-  } catch (error) {
-    return
-  }
-}
-
 export const pageSummaryJSON: {
   title: string | null
   content: string | null
@@ -329,7 +312,6 @@ export const getReviewsSites = () => {
   const hostname = location.hostname.replace(/^www\./, '')
   const href = location.href.replace(/^https?:\/\//, '')
   const bookingHotelRegex = new RegExp(`${hostname}\/hotel\/`, 'g')
-
   const site = /amazon.\w{2,}/gi.test(hostname)
     ? 'amazon'
     : hostname.includes('.douban.com')

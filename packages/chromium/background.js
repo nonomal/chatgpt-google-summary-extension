@@ -26,9 +26,9 @@
     mod
   ));
 
-  // node_modules/.pnpm/webextension-polyfill@0.10.0/node_modules/webextension-polyfill/dist/browser-polyfill.js
+  // node_modules/.pnpm/registry.npmmirror.com+webextension-polyfill@0.10.0/node_modules/webextension-polyfill/dist/browser-polyfill.js
   var require_browser_polyfill = __commonJS({
-    "node_modules/.pnpm/webextension-polyfill@0.10.0/node_modules/webextension-polyfill/dist/browser-polyfill.js"(exports2, module2) {
+    "node_modules/.pnpm/registry.npmmirror.com+webextension-polyfill@0.10.0/node_modules/webextension-polyfill/dist/browser-polyfill.js"(exports2, module2) {
       (function(global2, factory) {
         if (typeof define === "function" && define.amd) {
           define("webextension-polyfill", ["module"], factory);
@@ -1020,9 +1020,9 @@
     }
   });
 
-  // node_modules/.pnpm/p-defer@1.0.0/node_modules/p-defer/index.js
+  // node_modules/.pnpm/registry.npmmirror.com+p-defer@1.0.0/node_modules/p-defer/index.js
   var require_p_defer = __commonJS({
-    "node_modules/.pnpm/p-defer@1.0.0/node_modules/p-defer/index.js"(exports2, module2) {
+    "node_modules/.pnpm/registry.npmmirror.com+p-defer@1.0.0/node_modules/p-defer/index.js"(exports2, module2) {
       "use strict";
       module2.exports = () => {
         const ret = {};
@@ -1035,9 +1035,9 @@
     }
   });
 
-  // node_modules/.pnpm/map-age-cleaner@0.2.0/node_modules/map-age-cleaner/dist/index.js
+  // node_modules/.pnpm/registry.npmmirror.com+map-age-cleaner@0.2.0/node_modules/map-age-cleaner/dist/index.js
   var require_dist = __commonJS({
-    "node_modules/.pnpm/map-age-cleaner@0.2.0/node_modules/map-age-cleaner/dist/index.js"(exports2, module2) {
+    "node_modules/.pnpm/registry.npmmirror.com+map-age-cleaner@0.2.0/node_modules/map-age-cleaner/dist/index.js"(exports2, module2) {
       "use strict";
       var pDefer = require_p_defer();
       function mapAgeCleaner(map, property = "maxAge") {
@@ -1106,9 +1106,9 @@
     }
   });
 
-  // node_modules/.pnpm/expiry-map@2.0.0/node_modules/expiry-map/dist/index.js
+  // node_modules/.pnpm/registry.npmmirror.com+expiry-map@2.0.0/node_modules/expiry-map/dist/index.js
   var require_dist2 = __commonJS({
-    "node_modules/.pnpm/expiry-map@2.0.0/node_modules/expiry-map/dist/index.js"(exports2, module2) {
+    "node_modules/.pnpm/registry.npmmirror.com+expiry-map@2.0.0/node_modules/expiry-map/dist/index.js"(exports2, module2) {
       "use strict";
       var mapAgeCleaner = require_dist();
       var ExpiryMap2 = class {
@@ -1179,20 +1179,20 @@
   // src/background/index.ts
   var import_webextension_polyfill4 = __toESM(require_browser_polyfill());
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_freeGlobal.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_freeGlobal.js
   var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
   var freeGlobal_default = freeGlobal;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_root.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_root.js
   var freeSelf = typeof self == "object" && self && self.Object === Object && self;
   var root = freeGlobal_default || freeSelf || Function("return this")();
   var root_default = root;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_Symbol.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_Symbol.js
   var Symbol2 = root_default.Symbol;
   var Symbol_default = Symbol2;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_getRawTag.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_getRawTag.js
   var objectProto = Object.prototype;
   var hasOwnProperty = objectProto.hasOwnProperty;
   var nativeObjectToString = objectProto.toString;
@@ -1216,7 +1216,7 @@
   }
   var getRawTag_default = getRawTag;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_objectToString.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_objectToString.js
   var objectProto2 = Object.prototype;
   var nativeObjectToString2 = objectProto2.toString;
   function objectToString(value) {
@@ -1224,7 +1224,7 @@
   }
   var objectToString_default = objectToString;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseGetTag.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseGetTag.js
   var nullTag = "[object Null]";
   var undefinedTag = "[object Undefined]";
   var symToStringTag2 = Symbol_default ? Symbol_default.toStringTag : void 0;
@@ -1236,24 +1236,24 @@
   }
   var baseGetTag_default = baseGetTag;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isObjectLike.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isObjectLike.js
   function isObjectLike(value) {
     return value != null && typeof value == "object";
   }
   var isObjectLike_default = isObjectLike;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isArray.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isArray.js
   var isArray = Array.isArray;
   var isArray_default = isArray;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isObject.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isObject.js
   function isObject(value) {
     var type = typeof value;
     return value != null && (type == "object" || type == "function");
   }
   var isObject_default = isObject;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isFunction.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isFunction.js
   var asyncTag = "[object AsyncFunction]";
   var funcTag = "[object Function]";
   var genTag = "[object GeneratorFunction]";
@@ -1267,11 +1267,11 @@
   }
   var isFunction_default = isFunction;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_coreJsData.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_coreJsData.js
   var coreJsData = root_default["__core-js_shared__"];
   var coreJsData_default = coreJsData;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_isMasked.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_isMasked.js
   var maskSrcKey = function() {
     var uid = /[^.]+$/.exec(coreJsData_default && coreJsData_default.keys && coreJsData_default.keys.IE_PROTO || "");
     return uid ? "Symbol(src)_1." + uid : "";
@@ -1281,7 +1281,7 @@
   }
   var isMasked_default = isMasked;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_toSource.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_toSource.js
   var funcProto = Function.prototype;
   var funcToString = funcProto.toString;
   function toSource(func) {
@@ -1299,7 +1299,7 @@
   }
   var toSource_default = toSource;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseIsNative.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseIsNative.js
   var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
   var reIsHostCtor = /^\[object .+?Constructor\]$/;
   var funcProto2 = Function.prototype;
@@ -1318,37 +1318,37 @@
   }
   var baseIsNative_default = baseIsNative;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_getValue.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_getValue.js
   function getValue(object, key) {
     return object == null ? void 0 : object[key];
   }
   var getValue_default = getValue;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_getNative.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_getNative.js
   function getNative(object, key) {
     var value = getValue_default(object, key);
     return baseIsNative_default(value) ? value : void 0;
   }
   var getNative_default = getNative;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_WeakMap.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_WeakMap.js
   var WeakMap2 = getNative_default(root_default, "WeakMap");
   var WeakMap_default = WeakMap2;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isLength.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isLength.js
   var MAX_SAFE_INTEGER = 9007199254740991;
   function isLength(value) {
     return typeof value == "number" && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
   }
   var isLength_default = isLength;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isArrayLike.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isArrayLike.js
   function isArrayLike(value) {
     return value != null && isLength_default(value.length) && !isFunction_default(value);
   }
   var isArrayLike_default = isArrayLike;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_isPrototype.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_isPrototype.js
   var objectProto4 = Object.prototype;
   function isPrototype(value) {
     var Ctor = value && value.constructor, proto = typeof Ctor == "function" && Ctor.prototype || objectProto4;
@@ -1356,14 +1356,14 @@
   }
   var isPrototype_default = isPrototype;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseIsArguments.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseIsArguments.js
   var argsTag = "[object Arguments]";
   function baseIsArguments(value) {
     return isObjectLike_default(value) && baseGetTag_default(value) == argsTag;
   }
   var baseIsArguments_default = baseIsArguments;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isArguments.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isArguments.js
   var objectProto5 = Object.prototype;
   var hasOwnProperty3 = objectProto5.hasOwnProperty;
   var propertyIsEnumerable = objectProto5.propertyIsEnumerable;
@@ -1374,13 +1374,13 @@
   };
   var isArguments_default = isArguments;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/stubFalse.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/stubFalse.js
   function stubFalse() {
     return false;
   }
   var stubFalse_default = stubFalse;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isBuffer.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isBuffer.js
   var freeExports = typeof exports == "object" && exports && !exports.nodeType && exports;
   var freeModule = freeExports && typeof module == "object" && module && !module.nodeType && module;
   var moduleExports = freeModule && freeModule.exports === freeExports;
@@ -1389,7 +1389,7 @@
   var isBuffer = nativeIsBuffer || stubFalse_default;
   var isBuffer_default = isBuffer;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseIsTypedArray.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseIsTypedArray.js
   var argsTag2 = "[object Arguments]";
   var arrayTag = "[object Array]";
   var boolTag = "[object Boolean]";
@@ -1422,7 +1422,7 @@
   }
   var baseIsTypedArray_default = baseIsTypedArray;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseUnary.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseUnary.js
   function baseUnary(func) {
     return function(value) {
       return func(value);
@@ -1430,7 +1430,7 @@
   }
   var baseUnary_default = baseUnary;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_nodeUtil.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_nodeUtil.js
   var freeExports2 = typeof exports == "object" && exports && !exports.nodeType && exports;
   var freeModule2 = freeExports2 && typeof module == "object" && module && !module.nodeType && module;
   var moduleExports2 = freeModule2 && freeModule2.exports === freeExports2;
@@ -1447,12 +1447,12 @@
   }();
   var nodeUtil_default = nodeUtil;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isTypedArray.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isTypedArray.js
   var nodeIsTypedArray = nodeUtil_default && nodeUtil_default.isTypedArray;
   var isTypedArray = nodeIsTypedArray ? baseUnary_default(nodeIsTypedArray) : baseIsTypedArray_default;
   var isTypedArray_default = isTypedArray;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_overArg.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_overArg.js
   function overArg(func, transform) {
     return function(arg) {
       return func(transform(arg));
@@ -1460,11 +1460,11 @@
   }
   var overArg_default = overArg;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_nativeKeys.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_nativeKeys.js
   var nativeKeys = overArg_default(Object.keys, Object);
   var nativeKeys_default = nativeKeys;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_baseKeys.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_baseKeys.js
   var objectProto6 = Object.prototype;
   var hasOwnProperty4 = objectProto6.hasOwnProperty;
   function baseKeys(object) {
@@ -1481,23 +1481,23 @@
   }
   var baseKeys_default = baseKeys;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_Map.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_Map.js
   var Map2 = getNative_default(root_default, "Map");
   var Map_default = Map2;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_DataView.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_DataView.js
   var DataView = getNative_default(root_default, "DataView");
   var DataView_default = DataView;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_Promise.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_Promise.js
   var Promise2 = getNative_default(root_default, "Promise");
   var Promise_default = Promise2;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_Set.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_Set.js
   var Set = getNative_default(root_default, "Set");
   var Set_default = Set;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_getTag.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/_getTag.js
   var mapTag2 = "[object Map]";
   var objectTag2 = "[object Object]";
   var promiseTag = "[object Promise]";
@@ -1532,7 +1532,7 @@
   }
   var getTag_default = getTag;
 
-  // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/isEmpty.js
+  // node_modules/.pnpm/registry.npmmirror.com+lodash-es@4.17.21/node_modules/lodash-es/isEmpty.js
   var mapTag3 = "[object Map]";
   var setTag3 = "[object Set]";
   var objectProto7 = Object.prototype;
@@ -1562,13 +1562,16 @@
 
   // src/config/index.ts
   var import_webextension_polyfill = __toESM(require_browser_polyfill());
+  async function setSessionTask(taskId) {
+    return import_webextension_polyfill.default.storage.local.set({ taskId });
+  }
   async function getProviderConfigs() {
-    const { provider = "chatgpt" /* ChatGPT */ } = await import_webextension_polyfill.default.storage.local.get("provider");
+    const { provider: provider2 = "chatgpt" /* ChatGPT */ } = await import_webextension_polyfill.default.storage.local.get("provider");
     const configKey = `provider:${"gpt3" /* GPT3 */}`;
     const result = await import_webextension_polyfill.default.storage.local.get(configKey);
     const chatModel = await import_webextension_polyfill.default.storage.local.get("chatModel");
     return {
-      provider,
+      provider: provider2,
       configs: {
         ["gpt3" /* GPT3 */]: result[configKey]
       },
@@ -1583,7 +1586,7 @@
   // src/background/providers/chatgpt.ts
   var import_expiry_map = __toESM(require_dist2());
 
-  // node_modules/.pnpm/uuid@9.0.0/node_modules/uuid/dist/esm-browser/rng.js
+  // node_modules/.pnpm/registry.npmmirror.com+uuid@9.0.0/node_modules/uuid/dist/esm-browser/rng.js
   var getRandomValues;
   var rnds8 = new Uint8Array(16);
   function rng() {
@@ -1596,7 +1599,7 @@
     return getRandomValues(rnds8);
   }
 
-  // node_modules/.pnpm/uuid@9.0.0/node_modules/uuid/dist/esm-browser/stringify.js
+  // node_modules/.pnpm/registry.npmmirror.com+uuid@9.0.0/node_modules/uuid/dist/esm-browser/stringify.js
   var byteToHex = [];
   for (let i = 0; i < 256; ++i) {
     byteToHex.push((i + 256).toString(16).slice(1));
@@ -1605,13 +1608,13 @@
     return (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + "-" + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + "-" + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + "-" + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + "-" + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase();
   }
 
-  // node_modules/.pnpm/uuid@9.0.0/node_modules/uuid/dist/esm-browser/native.js
+  // node_modules/.pnpm/registry.npmmirror.com+uuid@9.0.0/node_modules/uuid/dist/esm-browser/native.js
   var randomUUID = typeof crypto !== "undefined" && crypto.randomUUID && crypto.randomUUID.bind(crypto);
   var native_default = {
     randomUUID
   };
 
-  // node_modules/.pnpm/uuid@9.0.0/node_modules/uuid/dist/esm-browser/v4.js
+  // node_modules/.pnpm/registry.npmmirror.com+uuid@9.0.0/node_modules/uuid/dist/esm-browser/v4.js
   function v4(options, buf, offset) {
     if (native_default.randomUUID && !buf && !options) {
       return native_default.randomUUID();
@@ -1631,7 +1634,7 @@
   }
   var v4_default = v4;
 
-  // node_modules/.pnpm/eventsource-parser@0.0.5/node_modules/eventsource-parser/dist/index.mjs
+  // node_modules/.pnpm/registry.npmmirror.com+eventsource-parser@0.0.5/node_modules/eventsource-parser/dist/index.mjs
   function createParser(onParse) {
     let isFirstChunk;
     let buffer;
@@ -1824,6 +1827,7 @@
   var ChatGPTProvider = class {
     constructor(token) {
       this.token = token;
+      this.tasks = {};
       this.token = token;
     }
     async fetchModels() {
@@ -1847,15 +1851,21 @@
     }
     async generateAnswer(params) {
       let conversationId;
+      const { taskId, prompt } = params;
+      const messageId = v4_default();
       const cleanup = () => {
         if (conversationId) {
           setConversationProperty(this.token, conversationId, { is_visible: false });
         }
       };
       const modelName = await this.getModelName();
+      const abortController = new AbortController();
+      this.tasks[taskId] = {
+        abortController
+      };
       await fetchSSE(`${BASE_URL}/backend-api/conversation`, {
         method: "POST",
-        signal: params.signal,
+        signal: abortController.signal,
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${this.token}`
@@ -1864,11 +1874,11 @@
           action: "next",
           messages: [
             {
-              id: v4_default(),
+              id: messageId,
               role: "user",
               content: {
                 content_type: "text",
-                parts: [params.prompt]
+                parts: [prompt]
               }
             }
           ],
@@ -1906,6 +1916,21 @@
       });
       return { cleanup };
     }
+    cancelTask(taskId) {
+      const taskInfo = this.tasks[taskId];
+      if (!taskInfo) {
+        return;
+      }
+      taskInfo.abortController.abort();
+    }
+    async updateTitle(params) {
+      const { conversationId, messageId } = params;
+      const modelName = await this.getModelName();
+      return await request(this.token, "POST", `/conversation/gen_title/${conversationId}`, {
+        message_id: messageId,
+        model: modelName
+      });
+    }
   };
 
   // src/background/providers/openai.ts
@@ -1913,6 +1938,7 @@
     constructor(token, model) {
       this.token = token;
       this.model = model;
+      this.tasks = {};
       this.token = token;
       this.model = model;
     }
@@ -1933,6 +1959,7 @@ ChatGPT:`;
       const [config] = await Promise.all([getProviderConfigs()]);
       const gptModel = (_b = (_a = config.configs["gpt3" /* GPT3 */]) == null ? void 0 : _a.model) != null ? _b : DEFAULT_MODEL;
       const apiHost = ((_c = config.configs["gpt3" /* GPT3 */]) == null ? void 0 : _c.apiHost) || DEFAULT_API_HOST;
+      const { taskId, prompt } = params;
       let url = "";
       let reqParams = {
         model: this.model,
@@ -1944,15 +1971,19 @@ ChatGPT:`;
       };
       if (gptModel === "text-davinci-003") {
         url = `https://${apiHost}/v1/completions`;
-        reqParams = { ...reqParams, ...{ prompt: this.buildPrompt(params.prompt) } };
+        reqParams = { ...reqParams, ...{ prompt: this.buildPrompt(prompt) } };
       } else {
         url = `https://${apiHost}/v1/chat/completions`;
-        reqParams = { ...reqParams, ...{ messages: this.buildMessages(params.prompt) } };
+        reqParams = { ...reqParams, ...{ messages: this.buildMessages(prompt) } };
       }
       let result = "";
+      const abortController = new AbortController();
+      this.tasks[taskId] = {
+        abortController
+      };
       await fetchSSE(url, {
         method: "POST",
-        signal: params.signal,
+        signal: abortController.signal,
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${this.token}`
@@ -1987,6 +2018,14 @@ ChatGPT:`;
       });
       return {};
     }
+    cancelTask(taskId) {
+      const taskInfo = this.tasks[taskId];
+      console.log("cancel task", taskId, taskInfo);
+      if (!taskInfo) {
+        return;
+      }
+      taskInfo.abortController.abort();
+    }
   };
 
   // src/utils/utils.ts
@@ -2006,9 +2045,9 @@ ChatGPT:`;
   }
 
   // src/background/index.ts
+  var provider;
   async function generateAnswers(port, question) {
     const providerConfigs = await getProviderConfigs();
-    let provider;
     if (providerConfigs.provider === "chatgpt" /* ChatGPT */) {
       const token = await getChatGPTAccessToken();
       provider = new ChatGPTProvider(token);
@@ -2018,14 +2057,16 @@ ChatGPT:`;
     } else {
       throw new Error(`Unknown provider ${providerConfigs.provider}`);
     }
-    const controller = new AbortController();
+    const taskId = v4_default();
     port.onDisconnect.addListener(() => {
-      controller.abort();
+      provider.cancelTask(taskId);
       cleanup == null ? void 0 : cleanup();
     });
+    await setSessionTask(taskId);
     const { cleanup } = await provider.generateAnswer({
       prompt: question,
-      signal: controller.signal,
+      // signal: controller.signal,
+      taskId,
       onEvent(event) {
         if (event.type === "done") {
           port.postMessage({ event: "DONE" });
@@ -2034,6 +2075,9 @@ ChatGPT:`;
         port.postMessage(event.data);
       }
     });
+  }
+  async function cancelTask(taskId) {
+    provider.cancelTask(taskId);
   }
   async function createTab(url) {
     import_webextension_polyfill4.default.tabs.query({ currentWindow: true, active: true }).then((tabs) => {
@@ -2092,6 +2136,8 @@ ChatGPT:`;
       } else {
         import_webextension_polyfill4.default.tabs.create({ url: "about:newtab", active: true });
       }
+    } else if (message.type === "STOP_TASK") {
+      await cancelTask(message.data.taskId);
     }
   });
   import_webextension_polyfill4.default.runtime.onInstalled.addListener(async (details) => {

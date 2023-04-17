@@ -159,7 +159,7 @@ function CustomizePrompt(props: Props) {
             <Collapse
               title={
                 <Text h4 className="glarity--mt-5 glarity--mb-0">
-                  YouTube / Bilibili{' '}
+                  YouTube 
                 </Text>
               }
             >
@@ -228,7 +228,7 @@ function CustomizePrompt(props: Props) {
             </Collapse>
 
             {/* Google */}
-            <Collapse
+            {/* <Collapse
               title={
                 <Text h4 className="glarity--mt-5 glarity--mb-0">
                   Google / Bing
@@ -302,10 +302,10 @@ function CustomizePrompt(props: Props) {
                   </Snippet>
                 </li>
               </ul>
-            </Collapse>
+            </Collapse> */}
 
             {/* Page Summary */}
-            <Collapse
+            {/* <Collapse
               title={
                 <Text h4 className="glarity--mt-5 glarity--mb-0">
                   Page Summary{' '}
@@ -379,10 +379,10 @@ function CustomizePrompt(props: Props) {
                   </Snippet>
                 </li>
               </ul>
-            </Collapse>
+            </Collapse> */}
 
             {/* Comment Summary */}
-            <Collapse
+            {/* <Collapse
               title={
                 <Text h4 className="glarity--mt-5 glarity--mb-0">
                   Comment Summary{' '}
@@ -447,7 +447,7 @@ function CustomizePrompt(props: Props) {
                   </Snippet>
                 </li>
               </ul>
-            </Collapse>
+            </Collapse> */}
           </Collapse.Group>
         </>
       )}
