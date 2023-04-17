@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity-Summary para sa Google/YouTube (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "Ipakita ang mga buod ng ChatGPT kasama ng mga resulta ng paghahanap sa Google at mga video sa YouTube"
-   }
- }
+  "appName": {
+    "message": "ChatGPT Glarity, Buod ng YouTube at Google"
+  },
+  "appDesc": {
+    "message": "Buod ng mga resulta ng paghahanap sa YouTube at Google gamit ang ChatGPT. Pinapayagan ka rin ng Glarity na madaling buod ang anumang webpage."
+  }
+}

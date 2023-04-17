@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Google/YouTube (ChatGPT) માટે ગ્લેરિટી-સારાંશ"
-   },
-   "appDesc": {
-     "message": "Google શોધ પરિણામો અને YouTube વિડિઓની સાથે ChatGPT સારાંશ પ્રદર્શિત કરો"
-   }
- }
+  "appName": {
+    "message": "ChatGPT Glarity, YouTube અને Googleનું સંક્ષિપ્તીકરણ"
+  },
+  "appDesc": {
+    "message": "ChatGPT સાથે YouTube અને Google શોધ પરિણામોનું સંક્ષિપ્તીકરણ. Glarity તમને કોઈ પણ વેબપેજ સરળતાથી સંક્ષિપ્ત કરવા માંગે છે."
+  }
+}

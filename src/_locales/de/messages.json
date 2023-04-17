@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity-Zusammenfassung für Google/YouTube (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "Zeigen Sie ChatGPT-Zusammenfassungen neben Google-Suchergebnissen und YouTube-Videos an"
-   }
- }
+  "appName": {
+    "message": "ChatGPT Glarity, Zusammenfassung von YouTube und Google"
+  },
+  "appDesc": {
+    "message": "Zusammenfassungen der Suchergebnisse von YouTube und Google mit ChatGPT. Glarity ermöglicht es Ihnen auch, jede Webseite einfach zusammenzufassen."
+  }
+}

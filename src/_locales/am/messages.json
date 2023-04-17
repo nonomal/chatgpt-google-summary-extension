@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity-ամփոփում Google/YouTube-ի համար (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "Ցուցադրեք ChatGPT ամփոփագրերը Google-ի որոնման արդյունքների և YouTube տեսանյութերի հետ մեկտեղ"
-   }
- }
+  "appName": {
+    "message": "ChatGPT Glarity، تلخيص نتائج بحث YouTube و Google"
+  },
+  "appDesc": {
+    "message": "تلخيص نتائج بحث YouTube و Google مع ChatGPT. يتيح لك Glarity تلخيص أي صفحة ويب بسهولة أيضًا."
+  }
+}

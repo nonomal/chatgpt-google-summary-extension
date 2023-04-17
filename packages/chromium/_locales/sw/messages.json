@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity- Muhtasari wa Google/YouTube (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "Onyesha muhtasari wa ChatGPT pamoja na matokeo ya utafutaji wa Google na video za YouTube"
-   }
- }
+  "appName": {
+    "message": "Muhtasari wa YouTube na ChatGPT - Glarity"
+  },
+  "appDesc": {
+    "message": "Tumia ChatGPT kwa muhtasari wa sehemu bora za video za YouTube"
+  }
+}

@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity-yhteenveto Googlelle/YouTubelle (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "Näytä ChatGPT-yhteenvedot Googlen hakutulosten ja YouTube-videoiden rinnalla"
-   }
- }
+  "appName": {
+    "message": "ChatGPT Glarity, Youtuben ja Googlen yhteenveto"
+  },
+  "appDesc": {
+    "message": "Yhteenvedot YouTube- ja Google-hakutuloksista ChatGPT:llä. Glarity antaa sinun myös helposti tiivistää minkä tahansa verkkosivun."
+  }
+}

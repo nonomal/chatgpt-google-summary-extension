@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity-Summary for Google / YouTube (ChatGPT)"
-   },
-   "appDesc": {
-     "message": "اعرض ملخصات ChatGPT بجانب نتائج بحث Google ومقاطع فيديو YouTube"
-   }
- }
+  "appName": {
+    "message": "تلخيص اليوتيوب بواسطة ChatGPT - Glarity"
+  },
+  "appDesc": {
+    "message": "استخدم ChatGPT لتلخيص أهم مقاطع فيديو اليوتيوب"
+  }
+}

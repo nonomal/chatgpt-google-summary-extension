@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Google/YouTube (ChatGPT) માટે ગ્લેરિટી-સારાંશ"
-   },
-   "appDesc": {
-     "message": "Google શોધ પરિણામો અને YouTube વિડિઓની સાથે ChatGPT સારાંશ પ્રદર્શિત કરો"
-   }
- }
+  "appName": {
+    "message": "ChatGPT સાથે YouTube સારાં બનાવો - Glarity"
+  },
+  "appDesc": {
+    "message": "YouTube વિડિયોના મહત્વના બિંદુઓને સંક્ષિપ્ત કરવા માટે ChatGPT નો ઉપયોગ કરો"
+  }
+}

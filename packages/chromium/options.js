@@ -31642,7 +31642,7 @@
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   var isFirefox = navigator.userAgent.indexOf("Firefox") != -1;
   var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  var AppName = "Glarity-Summary for Google/YouTube (ChatGPT)";
+  var AppName = "YouTube Summary with ChatGPT - Glarity";
   function detectSystemColorScheme() {
     if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       return "dark" /* Dark */;

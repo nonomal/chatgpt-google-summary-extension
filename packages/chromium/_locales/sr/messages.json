@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "Glarity- резиме за Гоогле/ИоуТубе (ЦхатГПТ)"
-   },
-   "appDesc": {
-     "message": "Прикажите ЦхатГПТ резимее поред резултата Гоогле претраге и ИоуТубе видео снимака"
-   }
- }
+  "appName": {
+    "message": "Sažetak YouTube uz pomoć ChatGPT - Glarity"
+  },
+  "appDesc": {
+    "message": "Koristite ChatGPT za sažimanje najboljih delova YouTube video snimaka"
+  }
+}
