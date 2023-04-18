@@ -1,8 +1,8 @@
 {
-   "appName": {
-     "message": "YouTube Summary with ChatGPT - Glarity"
-   },
-   "appDesc": {
-     "message": "Use ChatGPT to summarise Youtube video highlights"
-   }
- }
+  "appName": {
+    "message": "Resumen de YouTube con ChatGPT - Glarity"
+  },
+  "appDesc": {
+    "message": "Usa ChatGPT para resumir los puntos destacados de videos de YouTube"
+  }
+}

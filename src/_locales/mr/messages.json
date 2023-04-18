@@ -1,8 +1,8 @@
 {
   "appName": {
-    "message": "ChatGPT Glarity, यूट्यूब आणि गुगलचे संक्षिप्तीकरण करा"
+    "message": "ChatGPT Glarity, YouTube व्हिडिओ सारांश"
   },
   "appDesc": {
-    "message": "ChatGPT वापरून यूट्यूब आणि गुगल शोध निकाल विवरणांचे संक्षिप्तीकरण करणे आणि Glarity म्हणून आपण कोणत्याही वेबपेजचे संक्षिप्तीकरण आसानपणे करू शकता."
+    "message": "YouTube व्हिडिओ हायलाइट सारांश करण्यासाठी ChatGPT वापरा"
   }
 }

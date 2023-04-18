@@ -1,8 +1,8 @@
 {
   "appName": {
-    "message": "ChatGPT Glarity, สรุป YouTube และ Google"
+    "message": "สรุป YouTube ด้วย ChatGPT - Glarity"
   },
   "appDesc": {
-    "message": "สรุปผลการค้นหาจาก YouTube และ Google ด้วย ChatGPT พร้อม Glarity ช่วยสรุปเว็บไซต์ใดก็ได้อย่างง่ายดาย"
+    "message": "ใช้ ChatGPT เพื่อสรุปไฮไลต์วิดีโอ YouTube"
   }
 }
