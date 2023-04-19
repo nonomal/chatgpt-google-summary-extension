@@ -141,7 +141,7 @@ export async function saveProviderConfigs(
 export const BASE_URL = 'https://chat.openai.com'
 
 export const DEFAULT_PAGE_SUMMARY_BLACKLIST = `https://www.youtube.com`
-export const APP_TITLE = `Glarity Summary`
+export const APP_TITLE = `YouTube Summary`
 
 export const DEFAULT_MODEL = 'gpt-3.5-turbo'
 export const DEFAULT_API_HOST = 'api.openai.com'

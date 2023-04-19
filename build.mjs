@@ -11,7 +11,7 @@ dotenv.config()
 
 const outdir = 'build'
 const packagesDir = 'packages'
-const appName = 'Glarity-'
+const appName = 'Youtube-Summary-'
 
 const isDev = process.env.NODE_ENV === 'dev'
 
